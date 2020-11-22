@@ -1,0 +1,72 @@
+body {
+  background-color: $dark;
+}
+
+page-home {
+  ion-spinner {
+    position: absolute;
+    right: 50px;
+  }
+
+  .hardware-info p {
+    color: #ff0000;
+  }
+
+  .content {
+    // för allt
+    background: $tertiary;
+  }
+
+  .item-input {
+    border-radius: 1rem;
+    max-width: 50rem;
+  }
+
+  .welcome-panel {
+    margin: 0 auto;
+    z-index: 12;
+    // height: 100%;
+    width: 100%;
+    color: $light;
+    // float: left;
+    padding: 5%;
+  }
+
+  .button {
+    height: 5rem;
+    border-radius: 1rem;
+    //font-size: 3rem;
+    // border: 3px solid $primary;
+    margin-top: 1rem;
+  }
+
+  .recent-robot-button {
+    display: block;
+  }
+
+  .recent-robot-call-icon {
+    margin-left: 10px;
+    height: 3rem;
+    width: 3rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../assets/imgs/call.svg");
+  }
+
+  .version-nr {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1rem;
+    color: $primary-darker;
+  }
+
+  .danger {
+    color: $danger;
+  }
+
+  .approve {
+    color: $approve;
+  }
+}

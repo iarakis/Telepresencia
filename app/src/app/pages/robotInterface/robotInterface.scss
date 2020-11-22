@@ -1,0 +1,330 @@
+page-robotInterface {
+
+  [ion-fixed] {
+    height: 100%;
+    width: 100%; 
+  }
+
+  .scroll-content {
+    display: none;
+  }
+
+  .content {
+    background-color: $tertiary-lighter;
+  }
+
+
+    
+  #robot-remote-video {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-vertical-flip {
+    transform: rotateX(180deg);
+    -webkit-transform:rotateX(180deg); /* Safari and Chrome */
+    -moz-transform:rotateX(180deg); /* Firefox */
+  }
+
+  #emoji-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+  }
+
+  #emoji {
+    margin: auto;
+    font-size: 12rem; /* Seems like this is as big as it gets before it bugs out*/
+  }
+
+  #waving-container {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: grid;
+  }
+
+  #waving {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-left: 5%;
+    background-image: url('../assets/imgs/hand.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 20rem;
+    -moz-animation:wave 1s linear infinite;
+    animation:wave 1s linear infinite;
+  }
+
+  #chat-bubble-container {
+    border: 0px solid red;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    display: grid;
+    grid-template-columns: auto 4rem;
+  }
+
+  #chat {
+    font-size: 5rem;
+    color: $light-lighter;
+    background-color: $primary-lighter;
+    text-align:center;
+    vertical-align: middle;
+    padding: 2rem;
+    margin: 0rem;
+    border-radius: 3rem;
+    border-top-right-radius: 0;
+  }
+
+  .hidden-chat {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+
+  #chat-bubble-point {
+    border: 0px solid yellow;
+    width: 0;
+    height: 0;
+    border-top: 4rem solid $primary-lighter;
+    border-right: 2rem solid transparent;
+  }
+
+  #wait-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #wait-message {
+    border: 0px solid red;
+    font-size: 3rem;
+    color:white;
+    text-align: center;
+    // margin-top: 15rem;
+  }
+
+  #progress-spinner {
+    width: 10rem;
+    height: 10rem;
+    margin: auto;
+  }
+
+
+  #corner-div {
+    border: 0px solid red;
+    position: absolute;
+    top:0;
+    right:0;
+    width: 15rem;
+    height: 15rem;
+    display:grid;
+    grid-template-rows: 2em auto;
+    background-color: rgba($seethrough, $seethrough-opacity);
+    border-bottom-left-radius: 3rem;
+  }
+
+  #robot-name {
+    border: 0px solid red;
+    font-size: 1.5em;
+    color:white;
+    text-align: center;
+    height: 1.5em;
+    line-height: 2em;
+  }
+
+  #robot-local-video {
+    border: 0px solid yellow;
+    width:75%;
+    margin: auto;
+    border-radius: 2rem;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+  }
+
+  #bottom-controls {
+    border: 0px solid red;
+    position: absolute;
+    bottom:0;
+    right: 0;
+    padding: 1rem;
+    padding-left: 2rem;
+    background-color: rgba($seethrough, $seethrough-opacity);
+    border-top-left-radius: 3rem;
+  }
+
+  .warning {
+    width: 6rem;
+    height: 6rem;
+    display: inline-block;
+    position: relative;
+    top: 2rem;
+    text-align: center;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    margin-top: -3rem;
+    background-color: $danger;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .warning ion-icon {
+    line-height: 7.8rem;
+    font-size: 3rem;
+    color: white;
+  }
+
+  .control-button {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    border: 3px solid $primary;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+  }
+
+  #toggle-park-button {
+    font-size: 3.5rem;
+    padding: 0;
+    background-color: $danger;
+    border-color: $danger;
+  }
+
+  .toggle-off {
+    background-color: transparent !important;
+    border: 3px dashed $primary !important;
+  }
+
+  .toggle-off:hover {
+    background-color: $seethrough !important;
+  }
+
+  #end-call-button {
+    background-color: $danger;
+    border-color: $danger;
+    background-image: url('../assets/imgs/leave.svg');
+  }
+
+  
+  @keyframes wave {
+    0% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+      background-color: $light;
+    }
+    
+    50% {
+      -webkit-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+      background-color: $dark;
+    }
+
+    100% {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+      background-color: $light;
+    }
+  }
+
+  @-webkit-keyframes wave {
+    0% {
+      -webkit-transform: rotate(20deg);
+      background-color: $light;
+    }
+    
+    50% {
+      -webkit-transform: rotate(-20deg);
+      background-color: $dark;
+    }
+
+    100% {
+      -webkit-transform: rotate(20deg);
+      background-color: $light;
+    }
+  }
+
+  @-moz-keyframes wave {
+    0% {
+      -moz-webkit-transform: rotate(20deg);
+      background-color: $light;
+    }
+    
+    50% {
+      -moz-webkit-transform: rotate(-20deg);
+      background-color: $dark;
+    }
+
+    100% {
+      -moz-webkit-transform: rotate(20deg);
+      background-color: $light;
+    }
+  }
+
+
+
+  /*
+
+  #ble {
+    text-align: center;
+    background-color: red;
+    border-radius: 4px;
+    width: 32.5px;
+    height: 45px;
+    padding: 5px;
+    color: #fff;
+    border: 2px solid #000;
+    margin-top: -35px;
+  }
+
+  #ble ion-icon {
+    font-size: 25pt;
+    margin-left: -10px;
+  }
+
+
+  .toggle-button-enabled {
+    background-color: $approve;
+  }
+
+  .toggle-button-disabled {
+    background-color: $danger;
+  }
+
+  .waiting-text {
+    color: $dark;
+    text-align:center;
+    vertical-align: middle;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    
+  }
+
+  
+
+  
+
+
+
+
+  
+  }
+  */
+}

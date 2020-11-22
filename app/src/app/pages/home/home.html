@@ -1,0 +1,130 @@
+<ion-content>
+  <ng-container *ngIf="plt.is('cordova')">
+    <div ionic full class="welcome-panel">
+      <h1>Robbit</h1>
+      <button ion-button (click)="toggleServerSettings()">
+        <div>
+          <ion-icon name="cog"></ion-icon>
+          <label *ngIf="!showServerSettings">Visa serverinställningar</label>
+          <label *ngIf="showServerSettings">Göm serverinställningar</label>
+        </div>
+      </button>
+
+      <ng-container *ngIf="showServerSettings">
+        <h3>Server - <span class="approve" *ngIf="serverStatus==1">ansluten</span><span class="danger"
+            *ngIf="serverStatus==-1">ingen anslutning</span>
+          <ion-spinner color="light" *ngIf="serverStatus==0"></ion-spinner>
+        </h3>
+        <p>
+          Fyll i serverinställningar här. Kontakta din administratör om du behöver hjälp med det.
+        </p>
+        <form>
+          <p>
+            <ion-item>
+              <ion-label floating>Server-URL</ion-label>
+              <ion-input type="text" name="serverUrl" inputmode="url" autocapitalize="none" id="robot-name-input"
+                (ngModelChange)="serverSettingChange()" [(ngModel)]="serverUrl">
+                drive.robbit.se</ion-input>
+              <ion-icon *ngIf="invalidserverUrl" name="heart"></ion-icon>
+            </ion-item>
+          </p>
+          <p>
+            <ion-item>
+              <ion-label floating>Server-namn</ion-label>
+              <ion-input type="text" name="serverName" autocapitalize="none" id="robot-name-input"
+                (ngModelChange)="serverSettingChange()" [(ngModel)]="serverName">
+              </ion-input>
+              <ion-icon *ngIf="invalidserverName" name="heart"></ion-icon>
+            </ion-item>
+          </p>
+          <p>
+            <ion-item>
+              <ion-label floating>Server-lösenord</ion-label>
+              <ion-input type="text" name="serverPassword" autocapitalize="none" id="robot-name-input"
+                (ngModelChange)="serverSettingChange()" [(ngModel)]="serverPassword"></ion-input>
+              <ion-icon *ngIf="invalidserverPassword" name="heart"></ion-icon>
+            </ion-item>
+          </p>
+        </form>
+      </ng-container>
+      <ng-container *ngIf="readyToCreateRobotName">
+        <p>
+          Välkommen! Vad ska denna robot heta? Hitta på ett unikt namn som är
+          lätt att komma ihåg. Det är detta namn eleven anger för att koppla upp
+          sig till roboten.
+        </p>
+        <form (submit)="saveNameAndGoToRobotInterface()">
+          <ion-item>
+            <ion-label floating>Robotnamn</ion-label>
+            <ion-input type="text" name="robotname" id="robot-name-input" [(ngModel)]="robotName"></ion-input>
+            <ion-icon *ngIf="invalidRobotName" name="heart"></ion-icon>
+          </ion-item>
+          <p *ngIf="invalidRobotName">
+            Åh Nej! Namnet är redan upptaget. Du får välja ett annat.
+          </p>
+          <button ion-button [disabled]="!readyToEnterRobotInterface">
+            Namnge och starta!
+          </button>
+        </form>
+      </ng-container>
+      <ng-container *ngIf="storedName">
+        <p>Välkommen! Denna robot heter {{ storedName }}</p>
+        <button ion-button [disabled]="!readyToEnterRobotInterface" (click)="goToRobotInterface()">
+          Starta {{ storedName }}
+        </button>
+        <br />
+        <br />
+        <button ion-button color="danger" (click)="clearRobotName()">
+          Nytt namn
+        </button>
+        <p *ngIf="clearNamePressedOnce">
+          Tryck en gång till för att ta bort nuvarande namn och få chansen att
+          välja ett nytt.
+        </p>
+      </ng-container>
+      <div class="version-nr">v{{ appVersionString }}</div>
+      <div class="hardware-info">
+        <p *ngIf="!internetAvailable">
+          Hittar inget Internet! Behöver anslutning för att kunna koppla upp.
+        </p>
+        <p *ngIf="!bluetoothEnabled">
+          Du behöver slå på bluetooth!
+          <button ion-button (click)="ble.enable()">Slå på</button>
+        </p>
+        <p *ngIf="!locationEnabled">
+          Du behöver slå på platstjänster (annars funkar inte bluetooth)!
+          <button ion-button (click)="enableLocation()">Slå på</button>
+        </p>
+      </div>
+      <p *ngIf="!wifiEnabled">
+        WIFI är avstängt! Vi rekommenderar att du undviker att köra Robbit över
+        mobildata.
+        <button ion-button (click)="enableWifi()">Slå på WIFI</button>
+      </p>
+    </div>
+  </ng-container>
+
+  <div ionic full class="welcome-panel" *ngIf="!plt.is('cordova')">
+    <h1>Robbit</h1>
+    <p>Vilken robot vill du ringa upp?</p>
+    <form (submit)="checkNameAndGoToDriverInterface()">
+      <ion-item>
+        <ion-label floating>Robot namn</ion-label>
+        <ion-input type="text" autocapitalize="none" name="robotname" id="driver-name-input" [(ngModel)]="robotName">
+        </ion-input>
+      </ion-item>
+      <p *ngIf="invalidRobotName">
+        Hittade ingen robot med det namnet. Säker på att du stavade rätt?
+      </p>
+      <button ion-button [disabled]="!robotName || invalidRobotName === robotName">
+        Ring upp {{ this.robotName }}
+      </button>
+      <h3>Tidigare anslutna robotar:</h3>
+      <ng-container *ngFor="let robot of recentConnectedRobots">
+        <button ion-button class="recent-robot-button" (click)="this.robotName = robot.name">
+          {{ robot.name }} <span class="recent-robot-call-icon"></span>
+        </button>
+      </ng-container>
+    </form>
+  </div>
+</ion-content>
