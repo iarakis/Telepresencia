@@ -44,9 +44,9 @@ Se puede visualizar el robot en Realidad Aumentada, escaneando el siguiénte có
 # Proceso de fabricación
 El proceso de fabricación se simula utilizando un PLC S7-1200 de SIEMENS y el software Factory.io
 
-##Proceso separación del empaquetado para su envío.
-##Proceso de clasificación de piezas.
-
+*  Proceso separación del empaquetado para su envío.
+*  Proceso de clasificación de piezas.
+ 
 
 
 # Créditos
