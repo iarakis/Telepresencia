@@ -4,11 +4,7 @@ Este proyecto desarrolla el proceso de desarrollo y fabricación industrial de u
 
 [![VIDEO ROBOT](img/1.jpg)](https://www.youtube.com/watch?v=9LAC98Wxa0o)
 
-# Proceso de fabricación
-El proceso de fabricación se simula utilizando un PLC S7-1200 de SIEMENS y el software Factory.io
 
-##Proceso separación del empaquetado para su envío.
-##Proceso de clasificación de piezas.
 
 # Firmware del robot para Microbit
 
@@ -37,16 +33,19 @@ Se requieren las siguientes líneas en el directorio raíz del proyecto, pero no
 ## Cómo inicializar
 Hacer una copia de backend/docker/.env.example y renombrarlo a .env y asignar los valores adecuados Estos deben corresponderse con los archivos .env de la App. 
 
-# Diseño mecánico del robot para impresión 3D y Realidad Aumentada
-
-Se puede visualizar el robot en Realidad Aumentada, escaneando el siguiénte código QR. 
-
 # Medición de CO2 en el aula y visualización con Node-Red
 
 Se ha desarrollado un firmware para un microcontrolador Particle.io que lee de un sensor DHT11 de temperatura y humedad y un sensor CCS811 de eCO2 y VOC. Los datos recogidos se pueden visualizar en el siguiente enlace. 
 
+# Diseño mecánico del robot para impresión 3D y Realidad Aumentada
 
-# Ver también
+Se puede visualizar el robot en Realidad Aumentada, escaneando el siguiénte código QR. 
+
+# Proceso de fabricación
+El proceso de fabricación se simula utilizando un PLC S7-1200 de SIEMENS y el software Factory.io
+
+##Proceso separación del empaquetado para su envío.
+##Proceso de clasificación de piezas.
 
 
 
