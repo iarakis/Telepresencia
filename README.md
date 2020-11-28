@@ -51,7 +51,7 @@ Existen además evidencias de que los altos niveles de CO2 influyen sobre el ren
 Se puede visualizar el robot en Realidad Aumentada, escaneando el siguiénte código QR. 
 
 
-[![QR](img/QR.png)](https://www.youtube.com/watch?v=9LAC98Wxa0o)
+[![QR](img/QR.png)](https://sketchfab.com/3d-models/robot-de-telepresencia-imh-ce46d0bd06b64048968173223d61c20a)
 
 # Proceso de fabricación
 El proceso de fabricación se simula utilizando un PLC S7-1200 de SIEMENS y el software Factory.io
