@@ -35,7 +35,7 @@ Hacer una copia de backend/docker/.env.example y renombrarlo a .env y asignar lo
 
 # Medición de CO2 en el aula y visualización con Node-Red
 
-Se ha desarrollado un firmware para un microcontrolador Particle.io que lee de un sensor DHT11 de temperatura y humedad y un sensor CCS811 de eCO2 y VOC. Los datos recogidos se pueden visualizar en el siguiente enlace. 
+Se ha desarrollado un firmware para un microcontrolador Particle.io que lee de un sensor DHT11 de temperatura y humedad y un sensor CCS811 de eCO2 y VOC. Los datos recogidos se pueden visualizar en el siguiente enlace: https://j6q00k.stackhero-network.com/dashboard/
 
 # Diseño mecánico del robot para impresión 3D y Realidad Aumentada
 
