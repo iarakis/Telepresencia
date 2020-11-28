@@ -50,6 +50,16 @@ Existen además evidencias de que los altos niveles de CO2 influyen sobre el ren
 
 Se puede visualizar el robot en Realidad Aumentada, escaneando el siguiénte código QR. 
 
+<div class="sketchfab-embed-wrapper">
+    <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/ce46d0bd06b64048968173223d61c20a/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+        <a href="https://sketchfab.com/3d-models/robot-de-telepresencia-imh-ce46d0bd06b64048968173223d61c20a?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Robot de telepresencia IMH</a>
+        by <a href="https://sketchfab.com/iarakis?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">iarakis</a>
+        on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+    </p>
+</div>
+
+
 # Proceso de fabricación
 El proceso de fabricación se simula utilizando un PLC S7-1200 de SIEMENS y el software Factory.io
 
