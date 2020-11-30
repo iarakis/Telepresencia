@@ -45,13 +45,13 @@ Se ha desarrollado un firmware para un microcontrolador Particle.io que lee de u
 [![Sensor](img/Sensor.jpg)](https://www.youtube.com/watch?v=9LAC98Wxa0o)
 
 
-• Temperature
-• Humidity
-• eCO2
-• VOC 
-• Sound (microphone)
-• Motion (PIR) 
-• Light  
+* Temperatura
+* Humedad ambiente
+* eCO2
+* VOCs en el aire 
+* Ruido
+* Movimiento (PIR) 
+* Iluminación 
 
 Fuente: https://noticiasenlafrontera.net/escuelas-no-siguen-recomendaciones-de-calidad-del-aire-parar-reducir-exposicion-a-covid-19/
 
