@@ -44,6 +44,15 @@ Se ha desarrollado un firmware para un microcontrolador Particle.io que lee de u
 
 [![Sensor](img/Sensor.jpg)](https://www.youtube.com/watch?v=9LAC98Wxa0o)
 
+
+• Temperature
+• Humidity
+• eCO2
+• VOC 
+• Sound (microphone)
+• Motion (PIR) 
+• Light  
+
 Fuente: https://noticiasenlafrontera.net/escuelas-no-siguen-recomendaciones-de-calidad-del-aire-parar-reducir-exposicion-a-covid-19/
 
 Existen además evidencias de que los altos niveles de CO2 influyen sobre el rendimiento de los alumnos en el aula. https://pubmed.ncbi.nlm.nih.gov/25117890/
