@@ -35,13 +35,19 @@ Hacer una copia de backend/docker/.env.example y renombrarlo a .env y asignar lo
 
 # Medición de CO2 en el aula y visualización con Node-Red
 
+## Dashboard en Node-Red
 Se ha desarrollado un firmware para un microcontrolador Particle.io que lee de un sensor DHT11 de temperatura y humedad y un sensor CCS811 de eCO2 y VOC. Los datos recogidos se pueden visualizar en el siguiente enlace: 
 
 * [Dashboard](https://j6q00k.stackhero-network.com/dashboard/)
  
 
 "Algunos científicos comentan que mejorar la ventilación y la calidad del aire es un método que las escuelas pueden usar para reducir el riesgo de transmisión del coronavirus. Sin embargo, en una encuesta entre distritos escolares grandes del Norte de Texas, The Dallas Morning News encontró que las escuelas están lejos de alcanzar los parámetros de calidad del aire propuestos en junio por expertos en construcción. Investigadores de la Universidad de Harvard recomendaron instalar filtros de aire de alta graduación, limpiadores de aire portátiles y fuentes de luz ultravioleta dentro de los conductos de aire para eliminar al virus. Al revisar el nivel de dióxido de carbono en las aulas se puede comprobar si está entrando suficiente aire fresco..."
+ 
+Fuente: https://noticiasenlafrontera.net/escuelas-no-siguen-recomendaciones-de-calidad-del-aire-parar-reducir-exposicion-a-covid-19/
 
+Existen además evidencias de que los altos niveles de CO2 influyen sobre el rendimiento de los alumnos en el aula. https://pubmed.ncbi.nlm.nih.gov/25117890/
+
+## Multisensor
 [![Sensor](img/Sensor.jpg)](https://www.youtube.com/watch?v=9LAC98Wxa0o)
 
 
@@ -51,11 +57,7 @@ Se ha desarrollado un firmware para un microcontrolador Particle.io que lee de u
 * VOCs en el aire 
 * Ruido
 * Movimiento (PIR) 
-* Iluminación 
-
-Fuente: https://noticiasenlafrontera.net/escuelas-no-siguen-recomendaciones-de-calidad-del-aire-parar-reducir-exposicion-a-covid-19/
-
-Existen además evidencias de que los altos niveles de CO2 influyen sobre el rendimiento de los alumnos en el aula. https://pubmed.ncbi.nlm.nih.gov/25117890/
+* Iluminación
 
 # Diseño mecánico del robot para impresión 3D y Realidad Aumentada
 
